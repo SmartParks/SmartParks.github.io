@@ -21,6 +21,7 @@ module.exports = function (ctx) {
       remove: []
     },
     build: {
+      distDir: 'docs',
       scopeHoisting: true,
       vueRouterMode: 'history',
       // gzip: true,
