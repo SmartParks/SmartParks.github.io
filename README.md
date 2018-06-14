@@ -14,9 +14,29 @@
 
 > (After testing, delete files and folders copied from docs folder to root)
 
+> To generate a static site:
+> quasar build
+
+> To deploy dist on GitHub https://gist.github.com/cobyism/4730490
+
+> Remove /dist from .gitignore
+
+> git add dist/spa-mat && git commit -m "Initial dist/spa-mat subtree commit"
+
+> git subtree push --prefix dist/spa-mat origin gh-pages
+
+
 > bikemap.html page is not vueJS: https://smartparks.github.io/quasar1/bikemap.html
 
-> In docs/index.html, replace:
+
+> Didn't use, gh-pages instead.
+
+> quasar.conf.js > build
+
+> distDir: 'docs',
+
+
+> Might not be used -- In docs/index.html, replace:
 
 > src=/js with src=/quasar1/js
 
