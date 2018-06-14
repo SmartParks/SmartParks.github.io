@@ -43,6 +43,10 @@
 > Run everytime for static routing
 > vue-cli-ghpages --dir dist/spa-mat
 
+> Then copy from dist/spa-mat to root
+
+
+> NOT DOING
 > In dist/spa-mat/index.html, replace:
 
 > src=/js with src=/quasar1/js

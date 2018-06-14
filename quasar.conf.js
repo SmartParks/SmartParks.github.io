@@ -21,7 +21,6 @@ module.exports = function (ctx) {
       remove: []
     },
     build: {
-      assetsPublicPath: './',
       scopeHoisting: true,
       vueRouterMode: 'history',
       // gzip: true,
