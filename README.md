@@ -10,4 +10,4 @@
 
 > View on GitHub: https://smartparks.github.io
 
-> Issue: "bikes" route not working on GitHub https://smartparks.github.io/bikes
+> Issue: "bikes" route returning 404 on GitHub https://smartparks.github.io/bikes
