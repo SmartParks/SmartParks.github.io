@@ -14,8 +14,7 @@
 
 > (After testing, delete files and folders copied from docs folder to root)
 
-> bikemap.html page is not vueJS.
-
+> bikemap.html page is not vueJS: https://smartparks.github.io/quasar1/bikemap.html
 
 > In docs/index.html, replace:
 
