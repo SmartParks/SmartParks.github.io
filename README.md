@@ -33,6 +33,15 @@
 > quasar.conf.js > build
 > distDir: 'docs',
 
+> Added to quasar.conf.js > build
+> assetsPublicPath: './',
+> https://github.com/jeneser/vue-cli-ghpages
+
+> Install once globabally:
+> npm install -g vue-cli-ghpages
+
+> Run everytime for static routing
+> vue-cli-ghpages --dir dist/spa-mat
 
 > In dist/spa-mat/index.html, replace:
 
