@@ -8,8 +8,17 @@
 
 > View details: http://localhost:8083/bikes
 
-> View on GitHub: https://smartparks.github.io
+> View on GitHub: https://smartparks.github.io/quasar1
 
-> Issue: "bikes" route returning 404 on GitHub https://smartparks.github.io/bikes
+> Issue: "bikes" route returning 404 on GitHub
 
 > (After testing, delete files and folders copied from docs folder to root)
+
+> bikemap.html page is not vueJS.
+
+
+> In docs/index.html, replace:
+
+> src=/js with src=/quasar1/js
+
+> href=/app with href=/quasar1/app
