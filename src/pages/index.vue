@@ -1,41 +1,11 @@
 <template>
   <q-table
-    title="Table Title"
+    title="Atlanta Bikeshare API 1"
     :data="bikeData"
     :columns="columns"
     row-key="name"
   />
 </template>
-
-
-<!--
-Try:
-http://localhost:8081/
-
-
-Also CameraReady:
-
-https://ga.staging.extranet.milespartnership.com/api/query/active_nodes?type=listing&page=1&pagesize=20&product=3&client=cameraready&key=hHuwX8f7T7
-
-Bikes:
-
-https://api.coord.co/v1/bike/location?access_key=p9H_wRiQaoEoIKQBaJnA1oR77yCBY-6Z-AEku8bgJNk&latitude=${LATITUDE}&longitude=${LONGITUDE}&radius_km=10
-
-
-Pull first array (row) and get all the columns from the keys
-
-Object.keys
-
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys
-
-// array like object
-var obj = { 0: 'a', 1: 'b', 2: 'c' };
-console.log(Object.keys(obj)); // console: ['0', '1', '2']
-
-foreach over array
-
-Created "columns" array from the array of keys.
--->
 
 <script>
 import axios from 'axios'
@@ -52,6 +22,46 @@ export default {
           label: 'Name',
           align: 'left',
           field: 'name',
+          sortable: true
+        },
+        {
+          name: 'bikes',
+          required: false,
+          label: 'Bikes',
+          align: 'left',
+          field: 'bikes',
+          sortable: true
+        },
+        {
+          name: 'openDocks',
+          required: false,
+          label: 'Open Docks',
+          align: 'left',
+          field: 'openDocks',
+          sortable: true
+        },
+        {
+          name: 'reported',
+          required: false,
+          label: 'Reported',
+          align: 'left',
+          field: 'reported',
+          sortable: true
+        },
+        {
+          name: 'locationID',
+          required: false,
+          label: 'Location ID',
+          align: 'left',
+          field: 'locationID',
+          sortable: true
+        },
+        {
+          name: 'regionID',
+          required: false,
+          label: 'Region ID',
+          align: 'left',
+          field: 'regionID',
           sortable: true
         },
         {
@@ -74,7 +84,7 @@ export default {
       pagination: {
         page: 2
       },
-      paginationControl: { rowsPerPage: 3, page: 1 },
+      paginationControl: { rowsPerPage: 7, page: 1 },
       loading: false,
       dark: true,
       selectedSecond: [
@@ -120,7 +130,12 @@ export default {
         response.data.features.forEach(item => {
           tableData.push({
             name: item.properties.name,
-            systemID: item.properties.system_id
+            bikes: item.properties.num_bikes_available,
+            openDocks: item.properties.num_docks_available,
+            reported: item.properties.last_reported,
+            systemID: item.properties.system_id,
+            locationID: item.properties.location_id,
+            regionID: item.properties.region_id
           });
         });
         _this.bikeData = tableData;

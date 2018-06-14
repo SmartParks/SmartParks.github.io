@@ -1,12 +1,11 @@
 <template>
   <q-table
-    title="Atlanta Bikeshare API 1"
+    title="Table Title"
     :data="bikeData"
     :columns="columns"
     row-key="name"
   />
 </template>
-
 
 <!--
 
@@ -46,46 +45,6 @@ export default {
           sortable: true
         },
         {
-          name: 'bikes',
-          required: false,
-          label: 'Bikes',
-          align: 'left',
-          field: 'bikes',
-          sortable: true
-        },
-        {
-          name: 'openDocks',
-          required: false,
-          label: 'Open Docks',
-          align: 'left',
-          field: 'openDocks',
-          sortable: true
-        },
-        {
-          name: 'reported',
-          required: false,
-          label: 'Reported',
-          align: 'left',
-          field: 'reported',
-          sortable: true
-        },
-        {
-          name: 'locationID',
-          required: false,
-          label: 'Location ID',
-          align: 'left',
-          field: 'locationID',
-          sortable: true
-        },
-        {
-          name: 'regionID',
-          required: false,
-          label: 'Region ID',
-          align: 'left',
-          field: 'regionID',
-          sortable: true
-        },
-        {
           name: 'systemID',
           required: false,
           label: 'System ID',
@@ -105,7 +64,7 @@ export default {
       pagination: {
         page: 2
       },
-      paginationControl: { rowsPerPage: 7, page: 1 },
+      paginationControl: { rowsPerPage: 3, page: 1 },
       loading: false,
       dark: true,
       selectedSecond: [
@@ -151,12 +110,7 @@ export default {
         response.data.features.forEach(item => {
           tableData.push({
             name: item.properties.name,
-            bikes: item.properties.num_bikes_available,
-            openDocks: item.properties.num_docks_available,
-            reported: item.properties.last_reported,
-            systemID: item.properties.system_id,
-            locationID: item.properties.location_id,
-            regionID: item.properties.region_id
+            systemID: item.properties.system_id
           });
         });
         _this.bikeData = tableData;
