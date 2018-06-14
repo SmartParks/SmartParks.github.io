@@ -7,3 +7,7 @@
 > quasar dev -p 8083
 
 > View details: http://localhost:8083/bikes
+
+> View on GitHub: https://smartparks.github.io
+
+> Issue: "bikes" route not working on GitHub https://smartparks.github.io/bikes
