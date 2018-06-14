@@ -11,3 +11,5 @@
 > View on GitHub: https://smartparks.github.io
 
 > Issue: "bikes" route returning 404 on GitHub https://smartparks.github.io/bikes
+
+> (After testing, delete files and folders copied from docs folder to root)
