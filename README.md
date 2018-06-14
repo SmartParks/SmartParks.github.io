@@ -23,7 +23,7 @@
 
 > git add dist/spa-mat && git commit -m "Initial dist/spa-mat subtree commit"
 
-> FOR DEPLOYING STATIC SITE
+> FOR DEPLOYING STATIC SITE (deploy with GitHub desktop first)
 > git subtree push --prefix dist/spa-mat origin gh-pages
 
 
